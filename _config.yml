@@ -1,0 +1,29 @@
+title: Michael Sisk
+description: >
+  I'm a designer, developer, and creator from Michigan with a passion for the
+  web, awful movies, and setting people on fire.
+url: https://mgsisk.com
+defaults:
+  - scope:
+      path: ''
+    values:
+      image: hero-small.jpg
+      aside: complementary.md
+include:
+  - _pages
+exclude:
+  - Atomfile
+  - Brewfile
+  - code_of_conduct.md
+  - contributing.md
+  - Gemfile
+  - Gemfile.lock
+  - issue_template.md
+  - license.md
+  - node_modules
+  - package-lock.json
+  - package.json
+  - pull_request_template.md
+  - readme.md
+  - scripts.js
+  - support.md

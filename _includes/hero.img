@@ -1,0 +1,20 @@
+<p>
+  <picture>
+    <source media="(min-width: 70em)" srcset="
+      srv/hero-alt-small.jpg 522w,
+      srv/hero-alt-medium.jpg 1043w,
+      srv/hero-alt-large.jpg 1565w,
+      srv/hero-alt-full-hd.jpg 2086w,
+      srv/hero-alt-quad-hd.jpg 3129w,
+      srv/hero-alt-ultra-hd.jpg 4712w
+    ">
+    <img src="srv/hero-small.jpg" alt="Michael Sisk, creator of things" srcset="
+      srv/hero-small.jpg 522w,
+      srv/hero-medium.jpg 1043w,
+      srv/hero-large.jpg 1565w,
+      srv/hero-full-hd.jpg 2086w,
+      srv/hero-quad-hd.jpg 3129w,
+      srv/hero-ultra-hd.jpg 4712w
+    ">
+  </picture>
+</p>

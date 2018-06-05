@@ -1,0 +1,54 @@
+body > header {
+  background:
+    repeating-linear-gradient(
+      -3deg,
+      transparent,
+      transparent 0.45vru,
+      color(var(--color-text) alpha(1%)) 0.45vru,
+      color(var(--color-text) alpha(1%)) 0.5vru
+    ),
+    repeating-linear-gradient(
+      -93deg,
+      transparent,
+      transparent 0.45vru,
+      color(var(--color-text) alpha(1%)) 0.45vru,
+      color(var(--color-text) alpha(1%)) 0.5vru
+    ),
+    linear-gradient(135deg, var(--color-base), var(--color-altr));
+  box-shadow: 0 -0.2vru 0.4vru -0.4vru var(--color-text) inset;
+  color: var(--color-back) var(--color-base);
+  grid-area: banner;
+  padding: 1vru;
+  position: relative;
+  text-shadow: 0.2em 0.2em 0.4em var(--color-altr);
+  word-break: break-all;
+
+  &::after {
+    background:
+      repeating-linear-gradient(
+        135deg,
+        transparent,
+        transparent 0.15vru,
+        color(var(--color-back) alpha(1%)) 0.15vru,
+        color(var(--color-back) alpha(1%)) 0.2vru
+      ),
+      var(--color-text);
+    border: 0 0 0.05vru / solid / var(--color-back);
+    content: '';
+    position: absolute 0;
+    size: 100% 0.25vru;
+    z-index: 1;
+  }
+
+  & h1 {
+    margin: 0 3vru 0 0;
+  }
+
+  @media (--medium) {
+    padding: * calc(50% - var(--content-width) / 2 + 1vru);
+  }
+
+  @media (--large) {
+    padding: * calc(50% - (var(--content-width) + var(--sidebar-width)) / 2 + 1vru);
+  }
+}

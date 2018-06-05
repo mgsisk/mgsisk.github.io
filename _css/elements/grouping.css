@@ -1,0 +1,109 @@
+p {
+  margin: 0 0 1vru;
+}
+
+address {
+  font-style: normal;
+  margin: 0 0 1vru;
+}
+
+hr {
+  background: linear-gradient(135deg, var(--color-base), var(--color-altr)) no-repeat;
+  background-size: 100% 0.05vru;
+  border: 0;
+  overflow: visible;
+  size: 100% 1vru;
+}
+
+pre {
+  background: linear-gradient(var(--color-back), var(--color-back) 0.05vru, transparent 0.05vru) 0 0.2vru;
+  border-radius: 0.1vru;
+  color: var(--color-back) var(--color-text);
+  font: -1mfs/-1mlh var(--font-stack-mono);
+  margin: 0 0 1vru;
+  overflow: auto;
+  padding: 1vru;
+  position: relative;
+  tab-size: 2;
+
+  & code {
+    color: inherit;
+    font-size: inherit;
+  }
+}
+
+blockquote {
+  background:
+    linear-gradient(var(--color-back), var(--color-back) 0.05vru, transparent 0.05vru) 0 0.2vru,
+    var(--color-lite);
+  border-radius: 0.1vru;
+  margin: 0 0 1vru;
+  padding: 1vru;
+
+  & > :last-child {
+    margin: * * 0;
+  }
+}
+
+ol {
+  margin: 0 0 1vru;
+  padding: 0 0 0 calc(1vru + 1em);
+
+  @nest li & {
+    margin: 0;
+  }
+}
+
+ul {
+  list-style: square;
+  margin: 0 0 1vru;
+  padding: 0 0 0 calc(1vru + 1em);
+
+  @nest li & {
+    margin: 0;
+  }
+}
+
+menu {
+  margin: 0 0 1vru;
+  padding: 0 0 0 calc(1vru + 1em);
+
+  @nest li & {
+    margin: 0;
+  }
+}
+
+li {}
+
+dl {
+  margin: 0 0 1vru;
+}
+
+dt {
+  font-weight: bolder;
+}
+
+dd {
+  margin: 0;
+  padding: 0 0 0 calc(1vru + 1em);
+}
+
+figure {
+  margin: 0 0 1vru;
+}
+
+figcaption {
+  font-size: -1mfs;
+  line-height: -1mlh;
+}
+
+main {
+  grid-area: main;
+  padding: 1vru;
+
+  & > :last-child {
+    margin: * * 0;
+  }
+}
+
+div {}

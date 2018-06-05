@@ -1,0 +1,22 @@
+{
+  "default": true,
+  "first-header-h1": false,
+  "header-style": {
+    "style": "atx"
+  },
+  "ul-style": {
+    "style": "dash"
+  },
+  "no-trailing-spaces": false,
+  "line-length": false,
+  "blanks-around-headers": false,
+  "no-duplicate-header": false,
+  "ol-prefix": {
+    "style": "ordered"
+  },
+  "blanks-around-lists": false,
+  "hr-style": {
+    "style": "---"
+  },
+  "first-line-h1": false
+}

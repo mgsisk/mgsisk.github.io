@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+  color: var(--color-text) var(--color-back);
+  font: -1mfs/-1mlh var(--font-stack);
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+
+  @media (--small) {
+    font-size: 0mfs;
+    line-height: 0mlh;
+  }
+
+  @media (--full-hd) {
+    font-size: 1mfs;
+    line-height: 1mlh;
+  }
+
+  @media (--quad-hd) {
+    font-size: 2mfs;
+    line-height: 2mlh;
+  }
+
+  @media (--ultra-hd) {
+    font-size: 4mfs;
+    line-height: 4mlh;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+::selection {
+  background: color(var(--color-altr) alpha(20%));
+  text-shadow: none;
+}

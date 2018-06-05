@@ -1,0 +1,50 @@
+:root {
+  --color-back: white;
+  --color-text: color(var(--color-back) contrast(50%));
+  --color-grey: color(var(--color-text) contrast(0));
+  --color-lite: color(var(--color-back) shade(4%));
+  --color-base: hsl(161, 46%, 53%);
+  --color-altr: hsl(192, 100%, 41%);
+  --font-size: 1em;
+  --font-stack: 'Lato', sans-serif;
+  --font-stack-mono: 'Hack', monospace;
+  --line-height: 1.5rem;
+  --modular-scale: 1.25;
+  --content-width: 43em;
+  --sidebar-width: 24em;
+  --transition-duration: calc(0mlh * 1msu * 0.2s);
+  --transition-easing: ease-out-quart;
+}
+
+/* ----- Selectors ---------------------------------------------------------- */
+
+@custom-selector
+  :--input-basic
+  [type='date'],
+  [type='datetime-local'],
+  [type='email'],
+  [type='month'],
+  [type='number'],
+  [type='password'],
+  [type='search'],
+  [type='tel'],
+  [type='text'],
+  [type='time'],
+  [type='url'],
+  [type='week'];
+@custom-selector
+  :--button
+  button,
+  input[type='button'],
+  input[type='reset'],
+  input[type='submit'];
+@custom-selector :--enter :focus, :hover;
+
+/* ----- Media Queries ------------------------------------------------------ */
+
+@custom-media --small (width >= 30em); /* 480px */
+@custom-media --medium (width >= 43em); /* 688px */
+@custom-media --large (width >= 70em); /* 1120px */
+@custom-media --full-hd (width >= 120em); /* 1920px */
+@custom-media --quad-hd (width >= 160em); /* 2560px */
+@custom-media --ultra-hd (width >= 240em); /* 3840px */

@@ -1,0 +1,52 @@
+picture {}
+
+img {
+  border: 0;
+  border-radius: 0.1vru;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.frame {
+  height: 0;
+  margin: 0 0 1vru;
+  overflow: hidden;
+  padding: * * 56.25%;
+  position: relative;
+}
+
+iframe {
+  border-radius: 0.1vru;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+
+  @nest .frame & {
+    position: absolute 0;
+    size: 100%;
+  }
+}
+
+embed {}
+
+object {}
+
+video {
+  border-radius: 0.1vru;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+audio {
+  border-radius: 0.1vru;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+math {}
+
+svg {
+  vertical-align: middle;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Michael Sisk">
+    <meta name="description" property="og:description" content="{{ page.excerpt | replace: 'site.description', site.description | strip_html | truncate: 160 | smartify }}">
+    <meta name="viewport" content="initial-scale=1,minimum-scale=1,width=device-width">
+    <meta name="twitter:creator" content="@mgsisk">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.title | remove: '\' | smartify }}">
+    <meta property="og:title" content="{{ page.title | strip | remove: '\' | smartify }}">
+    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/srv/{{ page.image }}">
+    <meta property="og:url" content="{{ site.url }}{{site.baseurl }}{{ page.url | remove: '/index.html' }}">
+    <title>{{ page.title | strip | remove: '\' | smartify }} / {{ site.title }}</title>
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | remove: '/index.html' }}">
+    <link rel="icon" href="{{ site.baseurl }}/srv/icon.png">
+    <link rel="stylesheet" href="https://use.typekit.net/hne7oit.css">
+    <link rel="stylesheet" href="/srv/style.css">
+  </head>
+  <body id="top">
+    <a href="#nav">Skip to menu</a>
+    <header role="banner">
+      {{ page.title | prepend: '# ' | markdownify }}
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    {%- if page.aside -%}
+      <aside>
+        {%- capture aside -%}{%- include {{ page.aside }} -%}{%- endcapture -%}
+        {{ aside | markdownify }}
+      </aside>
+    {%- endif -%}
+    <nav id="nav">
+      <a href="{{ site.baseurl }}/"{% if page.title == "Hi, I'm Mike" %} class="active"{%- endif -%}>Home</a><br>
+      {%- for item in site.data.navigation -%}
+        {%- capture itemCheck -%}{{ item[1] | replace: '{', '' }}{%- endcapture -%}
+        {%- if item[1] == itemCheck -%}
+          <a href="{{ item[1] }}"{% if item[0] == page.title %} class="active"{%- endif -%}>{{ item[0] }}</a><br>
+        {%- else -%}
+          <h2>{{ item[0] }}</h2>
+          {%- for link in item[1] -%}
+            <a href="{{ link[1] }}"{% if link[0] == page.title %} class="active"{%- endif -%}>{{ link[0] }}</a><br>
+          {%- endfor -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </nav>
+    <a href="#top">Back to top</a>
+    <footer>
+      © {{ site.time | date: '%Y' }} Michael Sisk
+    </footer>
+  </body>
+</html>
