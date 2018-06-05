@@ -21,7 +21,7 @@
     "test:md": "markdownlint -c .markdownlintrc '*.md' '_pages/**/*.md' '_includes/**/*.md'",
     "test:yml": "find . -name '*.yml' ! -path '*/node_modules/*' | xargs -L1 js-yaml",
     "version": "git add --all",
-    "postversion": "git push"
+    "postversion": "git push --tags"
   },
   "devDependencies": {
     "chokidar": "^2.0.3",
