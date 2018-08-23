@@ -12,18 +12,12 @@ defaults:
 include:
   - _pages
 exclude:
-  - Atomfile
   - Brewfile
-  - code_of_conduct.md
-  - contributing.md
   - Gemfile
   - Gemfile.lock
-  - issue_template.md
   - license.md
   - node_modules
   - package-lock.json
   - package.json
-  - pull_request_template.md
   - readme.md
   - scripts.js
-  - support.md
