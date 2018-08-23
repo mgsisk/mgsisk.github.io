@@ -22,7 +22,7 @@ function run(task, tasks) {
 }
 
 /**
-* Process CSS with postcss.
+ * Process CSS with postcss.
  *
  * @return {void}
  */
