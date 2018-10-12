@@ -1,4 +1,4 @@
-[Cash.me](https://cash.me/$mgsisk){:.button}
+[PayPal.me](https://paypal.me/mgsisk){:.button}
 [Thank me](https://saythanks.io/to/mgsisk){:.button}
 [Contact me](mailto:me@mgsisk.com){:.button}
 
