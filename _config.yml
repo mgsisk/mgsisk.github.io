@@ -3,21 +3,10 @@ description: >
   Award-winning designer and developer with a passion for the web, new media,
   and bringing creative ideas to life.
 url: https://mgsisk.com
-defaults:
-  - scope:
-      path: ''
-    values:
-      image: hero-small.jpg
-      aside: complementary.md
 include:
   - _pages
 exclude:
-  - Brewfile
   - Gemfile
   - Gemfile.lock
   - license.md
-  - node_modules
-  - package-lock.json
-  - package.json
   - readme.md
-  - scripts.js
