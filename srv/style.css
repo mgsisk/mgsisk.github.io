@@ -1,0 +1,119 @@
+:root {
+  --color-background: white;
+  --color-foreground: #222;
+  --color-hyperlinks: royalblue;
+  --font-size: calc(1em + 1vw);
+  --font-stack: barlow, sans-serif;
+  --font-stack-head: var(--font-stack);
+  --line-height: 2;
+  --vert-rhythm: calc(var(--line-height) * 1rem);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+::after,
+::before {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+html {
+  border-top: 4vh solid var(--color-hyperlinks);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  cursor: default;
+  font: var(--font-size)/var(--line-height) var(--font-stack);
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  tab-size: 2;
+  -webkit-tap-highlight-color: transparent;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 96vh;
+}
+
+h1 {
+  font: 2.488em/calc(var(--vert-rhythm) * 2) var(--font-stack-head);
+  margin: 0;
+  padding: calc(var(--vert-rhythm) / 2) max(var(--vert-rhythm), calc(50% - 20rem));
+}
+
+p {
+  margin: 0;
+  padding: calc(var(--vert-rhythm) / 2) max(var(--vert-rhythm), calc(50% - 20rem));
+}
+
+a {
+  background: linear-gradient(var(--color-hyperlinks), var(--color-hyperlinks)) 0 calc(100% - 0.1em) no-repeat;
+  background-size: 100% 0;
+  border-radius: 0.2em;
+  color: var(--color-hyperlinks);
+  font-weight: 500;
+  outline: 0;
+  padding: 0 0.1em 0.1em;
+  text-decoration: underline;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.09em;
+  touch-action: manipulation;
+  transition:
+    background-position 0.15s ease-out,
+    background-size 0.15s ease-out,
+    color 0.15s ease-out,
+    text-decoration-color 0.15s ease-out;
+}
+
+a:focus,
+a:hover {
+  background-position: 0 100%;
+  background-size: 100% 100%;
+  color: var(--color-background);
+  text-decoration-color: transparent;
+}
+
+a:active {
+  background: var(--color-foreground);
+  color: var(--color-background);
+  transition: none;
+}
+
+@media (orientation: portrait) {
+  html {
+    border-top: 0;
+    border-left: 4vw solid var(--color-hyperlinks);
+  }
+
+  body {
+    min-height: 100vh;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #222;
+    --color-foreground: white;
+    --color-hyperlinks: dodgerblue;
+  }
+}
+
+@media (hover: none) {
+  :root {
+    --line-height: 3;
+  }
+
+  h1 {
+    line-height: var(--vert-rhythm);
+  }
+
+  a {
+    padding: 0.5em 0.1em;
+  }
+}
