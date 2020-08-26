@@ -2,30 +2,22 @@
 title: Hi, I'm Mike
 excerpt: site.description
 permalink: /
+layout: default
 ---
 
-{% include hero.img %}
+I'm an [award-winning][] [designer][] and [developer][] with a passion for the
+web, new media, and bringing creative ideas to life. I live in [Kalamazoo][] and
+work in [higher][] [education][], but I'm always [open to new opportunities][].
 
-I'm a designer, developer, and creator from Michigan with a passion for the web,
-awful movies, and setting people on fire. Technically skilled, aesthetically
-inclined, and inquisitive by nature, I pursue creative endeavors with my selkie
-wife while working for a midwestern university during the day and
-building death gauntlets for acrobatic plumbers at night.
+If you like what I do please [support my work][].
 
-If you’re reading this you may be familiar with Webcomic, a WordPress plugin I
-created that helps people publish… uh, webcomics. Since 2008 I’ve spent a lot of
-my free time supporting and continuing to develop Webcomic. It's a lot of fun!
-It's also increasingly difficult to dedicate the time I’d like to these sorts of
-projects.
-
-Creating and continuing to support projects like Webcomic is a challenge. When I
-started working on Webcomic I was an unemployed college graduate with lots of
-free time; now I’m a doubly-employed husband and graduate student with very
-little free time. In spite of the challenge I’d love to do more, not just with
-Webcomic, but with other projects as well.
-
-If you like what I create, please consider donating to my ongoing creative work.
-Besides a level of thanks and gratitude directly proportional to your monetary
-support, you’ll be providing ongoing validation and encouragement for my
-creative efforts. I spend a lot of time working on projects like Webcomic, but
-it's much easier to justify that time with feedback and support from patrons.
+[award-winning]: https://linkedin.com/in/mgsisk
+[designer]: https://dribbble.com/mgsisk
+[developer]: https://github.com/mgsisk
+[higher]: https://wmich.edu
+[education]: https://kellogg.edu
+[independent projects]: https://github.com
+[wife's comic]: https://numinathecomic.com
+[kalamazoo]: https://kalamazoocity.org
+[support my work]: https://liberapay.org/mgsisk
+[open to new opportunities]: mailto:me@mgsisk.com
