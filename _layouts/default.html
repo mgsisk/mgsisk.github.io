@@ -9,11 +9,11 @@
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | remove: '/index.html' | remove: '/index' }}">
     <link rel="icon" href="{{ site.baseurl }}/srv/icon.svg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&display=swap">
-    <link rel="stylesheet" href="/srv/style.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/srv/style.css">
   </head>
   <body>
     {{ page.title | prepend: '# ' | markdownify }}
     {{ content }}
-    <script src="/srv/script.js"></script>
+    <script src="{{ site.baseurl }}/srv/script.js"></script>
   </body>
 </html>
