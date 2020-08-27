@@ -38,17 +38,16 @@ html {
 body {
   margin: 0;
   min-height: 96vh;
+  padding: var(--vert-rhythm) max(var(--vert-rhythm), calc(50% - 18rem));
 }
 
 h1 {
   font: 2.488em/calc(var(--vert-rhythm) * 2) var(--font-stack-head);
-  margin: 0;
-  padding: calc(var(--vert-rhythm) / 2) max(var(--vert-rhythm), calc(50% - 20rem));
+  margin: 0 0 var(--vert-rhythm);
 }
 
 p {
-  margin: 0;
-  padding: calc(var(--vert-rhythm) / 2) max(var(--vert-rhythm), calc(50% - 20rem));
+  margin: 0 0 var(--vert-rhythm);
 }
 
 a {
@@ -84,6 +83,20 @@ a:active {
   transition: none;
 }
 
+@media (hover: none) {
+  :root {
+    --line-height: 3;
+  }
+
+  h1 {
+    line-height: var(--vert-rhythm);
+  }
+
+  a {
+    padding: 0.5em 0.1em;
+  }
+}
+
 @media (orientation: portrait) {
   html {
     border-top: 0;
@@ -101,19 +114,5 @@ a:active {
     --color-background: #222;
     --color-foreground: white;
     --color-hyperlinks: dodgerblue;
-  }
-}
-
-@media (hover: none) {
-  :root {
-    --line-height: 3;
-  }
-
-  h1 {
-    line-height: var(--vert-rhythm);
-  }
-
-  a {
-    padding: 0.5em 0.1em;
   }
 }
