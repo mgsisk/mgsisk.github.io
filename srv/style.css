@@ -22,8 +22,8 @@
 }
 
 html {
-  border-top: 4vh solid var(--color-hyperlinks);
   background: var(--color-background);
+  border-top: 4vh solid var(--color-hyperlinks);
   color: var(--color-foreground);
   cursor: default;
   font: var(--font-size)/var(--line-height) var(--font-stack);
@@ -31,6 +31,10 @@ html {
   overflow-x: hidden;
   overflow-wrap: break-word;
   tab-size: 2;
+  transition:
+    background-color 0.15s ease-out,
+    border 0.15s ease-out,
+    color 0.15s ease-out;
   -webkit-tap-highlight-color: transparent;
   text-size-adjust: 100%;
 }
