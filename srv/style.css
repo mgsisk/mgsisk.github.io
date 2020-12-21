@@ -1,7 +1,7 @@
 :root {
-  --color-background: white;
+  --color-background: #fff;
   --color-foreground: #222;
-  --color-hyperlinks: royalblue;
+  --color-hyperlinks: #222;
   --font-size: calc(1em + 1vw);
   --font-stack: barlow, sans-serif;
   --font-stack-head: var(--font-stack);
@@ -116,7 +116,7 @@ a:active {
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: #222;
-    --color-foreground: white;
-    --color-hyperlinks: dodgerblue;
+    --color-foreground: #fff;
+    --color-hyperlinks: #fff;
   }
 }
