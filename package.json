@@ -1,0 +1,23 @@
+{
+  "name": "mgsisk.github.io",
+  "version": "1.0.0",
+  "description": "This is the source repo for <https://mgsisk.com>.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgsisk/mgsisk.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgsisk/mgsisk.github.io/issues"
+  },
+  "homepage": "https://github.com/mgsisk/mgsisk.github.io#readme",
+  "devDependencies": {
+    "lighthouse": "^6.3.0"
+  }
+}
