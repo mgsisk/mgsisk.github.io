@@ -9,4 +9,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - license.md
+  - package-lock.json
+  - package.json
   - readme.md
+  - vagrant.sh
+  - Vagrantfile
