@@ -9,7 +9,7 @@ I'm an [award-winning][] [designer][] and [developer][] with a passion for the
 web, new media, and bringing creative ideas to life. I live in [Kalamazoo][] and
 work in [higher][] [education][], but I'm always [open to new opportunities][].
 
-If you like what I do please [support my work][].
+<iframe src="https://github.com/sponsors/mgsisk/button" title="Sponsor Michael Sisk" height="35" width="116"></iframe>
 
 [award-winning]: https://linkedin.com/in/mgsisk
 [designer]: https://dribbble.com/mgsisk
