@@ -87,6 +87,10 @@ a:active {
   transition: none;
 }
 
+iframe {
+  border: 0;
+}
+
 @media (hover: none) {
   :root {
     --line-height: 3;
