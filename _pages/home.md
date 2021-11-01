@@ -9,7 +9,7 @@ I'm an [award-winning][] [designer][] and [developer][] with a passion for the
 web, new media, and bringing creative ideas to life. I live in [Kalamazoo][] and
 work in [higher][] [education][], but I'm always [open to new opportunities][].
 
-<iframe src="https://github.com/sponsors/mgsisk/button" title="Sponsor Michael Sisk" height="35" width="116"></iframe>
+If you like what I do please [sponsor me][].
 
 [award-winning]: https://linkedin.com/in/mgsisk
 [designer]: https://dribbble.com/mgsisk
@@ -19,5 +19,6 @@ work in [higher][] [education][], but I'm always [open to new opportunities][].
 [independent projects]: https://github.com
 [wife's comic]: https://numinathecomic.com
 [kalamazoo]: https://kalamazoocity.org
+[sponsor me]: https://github.com/sponsors/mgsisk
 [support my work]: https://liberapay.org/mgsisk
 [open to new opportunities]: mailto:me@mgsisk.com
