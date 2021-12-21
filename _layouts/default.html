@@ -19,7 +19,7 @@
     {% if page.permalink == '/portfolio' %}
       {% for item in site.data.portfolio %}
         <figure id="{{ item.name | slugify }}">
-          <a href="#{{ item.name | slugify }}">
+          <a href="#{{ item.name | slugify }}" aria-label="{{ item.name | smartify }}">
             {% if item.vid %}
               <video data-src="/srv/{{ item.vid }}" autoplay loop muted playsinline data-poster="/srv/{{ item.src }}"></video>
             {% else %}
