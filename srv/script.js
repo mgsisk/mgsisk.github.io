@@ -25,9 +25,9 @@ const colors = [
   'violet',
   'hotpink',
 ]
-const color = Math.floor(Math.random() * (colors.length / 2))
 const media = matchMedia('(prefers-color-scheme: dark)')
 const updateColor = (scheme)=> {
+  let color = Math.floor(Math.random() * (colors.length / 2))
   if (scheme.matches) {
     return document.documentElement.style.setProperty('--color-hyperlinks', colors[color + colors.length / 2])
   }
