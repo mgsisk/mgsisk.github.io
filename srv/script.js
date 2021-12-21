@@ -38,3 +38,14 @@ const updateColor = (scheme)=> {
 updateColor(media)
 
 media.addListener(updateColor)
+
+document.querySelectorAll('[data-src]').forEach((element)=> {
+  element.src = element.dataset.src
+
+  if (element.dataset.poster) {
+    element.poster = element.dataset.src
+  }
+
+  delete element.dataset.poster
+  delete element.dataset.src
+})
