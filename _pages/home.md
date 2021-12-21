@@ -12,13 +12,11 @@ work in [higher][] [education][], but I'm always [open to new opportunities][].
 If you like what I do please [sponsor me][].
 
 [award-winning]: https://linkedin.com/in/mgsisk
-[designer]: https://dribbble.com/mgsisk
+[designer]: /portfolio
 [developer]: https://github.com/mgsisk
 [higher]: https://wmich.edu
 [education]: https://kellogg.edu
 [independent projects]: https://github.com
-[wife's comic]: https://numinathecomic.com
 [kalamazoo]: https://kalamazoocity.org
 [sponsor me]: https://github.com/sponsors/mgsisk
-[support my work]: https://liberapay.org/mgsisk
 [open to new opportunities]: mailto:me@mgsisk.com
