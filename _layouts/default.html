@@ -10,6 +10,8 @@
     <link rel="icon" href="{{ site.baseurl }}/srv/icon.svg">
     <link rel="stylesheet" href="https://use.typekit.net/upg6met.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/srv/style.css">
+    {% if page.permalink == '/portfolio' %}
+    {% endif %}
   </head>
   <body>
     {{ page.title | prepend: '# ' | markdownify }}
@@ -19,9 +21,9 @@
         <figure id="{{ item.name | slugify }}">
           <a href="#{{ item.name | slugify }}">
             {% if item.vid %}
-              <video src="/srv/{{ item.vid }}" autoplay loop muted poster="/srv/{{ item.src }}"></video>
+              <video data-src="/srv/{{ item.vid }}" autoplay loop muted playsinline data-poster="/srv/{{ item.src }}"></video>
             {% else %}
-              <img src="/srv/{{ item.src }}" alt="{{ item.name | smartify }}">
+              <img data-src="/srv/{{ item.src }}" alt="{{ item.name | smartify }}">
             {% endif %}
           </a>
           <h2>{% if item.url %}<a href="{{ item.url }}">{{ item.name | smartify }}</a>{% else %}{{ item.name | smartify }}{% endif %}</h2>
