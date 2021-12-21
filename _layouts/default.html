@@ -14,6 +14,28 @@
   <body>
     {{ page.title | prepend: '# ' | markdownify }}
     {{ content }}
+    {% if page.permalink == '/portfolio' %}
+      {% for item in site.data.portfolio %}
+        <figure id="{{ item.name | slugify }}">
+          <a href="#{{ item.name | slugify }}">
+            {% if item.vid %}
+              <video src="/srv/{{ item.vid }}" autoplay loop muted poster="/srv/{{ item.src }}"></video>
+            {% else %}
+              <img src="/srv/{{ item.src }}" alt="{{ item.name | smartify }}">
+            {% endif %}
+          </a>
+          <h2>{% if item.url %}<a href="{{ item.url }}">{{ item.name | smartify }}</a>{% else %}{{ item.name | smartify }}{% endif %}</h2>
+          <figcaption>{{ item.desc | markdownify }}</figcaption>
+        </figure>
+      {% endfor %}
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#000000">
+          <title>Back to top</title>
+          <path d="M0 0h24v24H0V0z" fill="none"/>
+          <path d="M11.29 8.71L6.7 13.3c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 10.83l3.88 3.88c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 8.71c-.38-.39-1.02-.39-1.41 0z"/>
+        </svg>
+      </a>
+    {% endif %}
     <script src="{{ site.baseurl }}/srv/script.js"></script>
   </body>
 </html>
