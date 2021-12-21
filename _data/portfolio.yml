@@ -1,0 +1,91 @@
+- name: WMU Esports
+  src: wmu-esports.jpg
+  vid: wmu-esports.m4v
+  desc: >
+    Launched as part of Western Michigan University's Esports@WMU initiative,
+    the wmuesports.com website provided news and information about the exciting
+    new campus project. As one of the co-authors of and implementation team
+    members for the initiative, I was tasked with creating and implementing the
+    new website based on existing University branding standards.
+
+- name: King of the Unknown
+  url: https://kingoftheunknown.com
+  src: kotu.jpg
+  desc: >
+    Created by MD Mortem, King of the Unknown is "a rock-powered series that's
+    equal parts supernatural horror, raunchy comedy, action epic, and
+    all-you-can-eat conspiracy theory buffet." I worked with MD to redesign the
+    previous King of the Unknown website that I had also designed and
+    developed. For this redesign MD provided the basic design concepts and art
+    that I implemented in a custom-built WordPress theme.
+
+- name: Kalamazoo Hot Dog Walk
+  url: https://hotdogwalk.com
+  src: khdw.jpg
+  desc: >
+    An annual fundraising event for over a decade, the Kalamazoo Hot Dog Walk is
+    "all about having fun, making new friends, sampling great food and helping
+    those in need in our community." I've worked closely with the "DogFathers"
+    during that time, creating the Walk's logo, designing some of the Walk's
+    T-shirts, and custom-building the web site that builds anticipation for the
+    event and powers annual Walk registrations.
+
+- name: Astronaut Family Album
+  src: afa.jpg
+  vid: afa.m4v
+  desc: >
+    Created for the Bridgman Public Schools Lego League team, the Astronaut
+    Family Album is a concept application. The app contains a collection of
+    items (photos, videos, text, etc.) which unlock after a fixed amount of
+    time. Astronauts would take the app into space with them and check it
+    periodically to receive new memories from home. I met with Bridgman's 4th
+    Grade Lego League team to work out their concept for the app, then designed
+    and built it, with minor refinement, to their specifications.
+
+- name: Biosciences Research and Commercialization Center
+  url: https://wmubrcc.com
+  src: brcc.jpg
+  desc: >
+    The Biosciences Research and Commercialization Center of Western Michigan
+    University "provides startup and gap funding to promising Michigan-based
+    life sciences and medical device ventures entering the commercialization
+    phase of development." I worked with the BRCC as an independent creative
+    consultant to redesign their aging website and give it a clean, modern,
+    single-page redesign. WordPress was used to allow BRCC staff to easily
+    update the site.
+
+- name: USA Tae Kwon Do
+  url: https://usatkdmi.com
+  src: usatkd.jpg
+  desc: >
+    Enter the House of Discipline! USA Tae Kwon Do is a local Kalamazoo, MI
+    business dedicated to "helping people build self-confidence, self-esteem,
+    and learn self-defense while getting fit, losing weight, and having fun." I
+    worked with Grand Master M'Hammad to redesign his existing web presence
+    using a custom-built WordPress theme, with a specific focus on sharing
+    information about the dojang and upcomming events.
+
+- name: Webcomic and Inkblot
+  url: https://mgsisk.com/webcomic
+  src: webcomic.jpg
+  desc: >
+    Webcomic is a plugin for WordPress that provides a host of features related
+    to creating, managing, and sharing comics on the web. I originally created
+    Webcomic in 2008, and have continued to develop and support it ever since.
+    Webcomic works with any WordPress theme, but I also developed Inkblot -- a
+    theme built specifically for use with the Webcomic plugin -- to help
+    webcomic authors get their sites up quickly and share their work with the
+    world.
+
+- name: Hazard
+  url: https://mgsisk.com/hazard
+  src: hazard.jpg
+  desc: >
+    Hazard is a tiny web application for creating Jeopardy-style quizzes. Using
+    basic HTML, CSS, and JavaScript, Hazard allows a user to create any number
+    of quizzes with multiple rounds, categories, questions, point values,
+    timers, players, and more. Quizzes are saved locally using the Web Storage
+    API and can be backed up and imported into other browsers. Created as the
+    final project of an Educational Technology masters course on gamification,
+    Hazard was an interesting challenge in creating a self-contained web app
+    with classroom applications.
