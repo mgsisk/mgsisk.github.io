@@ -4,6 +4,7 @@
   "description": "This is the source repo for <https://mgsisk.com>.",
   "main": "index.js",
   "scripts": {
+    "make": "vagrant ssh -c 'sudo jekyll build -d /srv/web -s /vagrant -w --force_polling'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
