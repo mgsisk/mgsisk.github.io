@@ -17,15 +17,17 @@
     {% if page.permalink == '/portfolio' %}
       {% for item in site.data.portfolio %}
         <figure id="{{ item.name | slugify }}">
-          <a href="#{{ item.name | slugify }}" aria-label="{{ item.name | smartify }}">
-            {% if item.vid %}
-              <video data-src="/srv/{{ item.vid }}" autoplay loop muted playsinline data-poster="/srv/{{ item.src }}"></video>
-            {% else %}
-              <img data-src="/srv/{{ item.src }}" alt="{{ item.name | smartify }}">
-            {% endif %}
-          </a>
-          <h2>{% if item.url %}<a href="{{ item.url }}">{{ item.name | smartify }}</a>{% else %}{{ item.name | smartify }}{% endif %}</h2>
           <figcaption>{{ item.desc | markdownify }}</figcaption>
+          {% if item.vid %}
+            <a href="#{{ item.name | slugify }}" aria-label="{{ item.name | smartify }}">
+              <video data-src="/srv/{{ item.vid }}" autoplay loop muted playsinline data-poster="/srv/{{ item.src }}"></video>
+            </a>
+          {% else %}
+            <a href="#{{ item.name | slugify }}">
+              <img data-src="/srv/{{ item.src }}" alt="{{ item.name | smartify }}">
+            </a>
+          {% endif %}
+          <h2>{% if item.url %}<a href="{{ item.url }}">{{ item.name | smartify }}</a>{% else %}{{ item.name | smartify }}{% endif %}</h2>
         </figure>
       {% endfor %}
       <a href="#">
