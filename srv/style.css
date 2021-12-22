@@ -125,7 +125,7 @@ figure h2 {
   left: calc(var(--vert-rhythm) * 0.25);
   margin: 0;
   opacity: 0;
-  order: -2;
+  order: -1;
   padding: calc(var(--vert-rhythm) * 0.5);
   pointer-events: none;
   position: absolute;
@@ -149,7 +149,6 @@ figcaption {
   font-size: 0.833em;
   line-height: var(--vert-rhythm);
   height: 0;
-  order: -1;
   overflow: hidden;
 }
 
