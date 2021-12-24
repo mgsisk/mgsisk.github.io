@@ -175,7 +175,6 @@ figure:target video {
   height: auto;
 }
 
-
 figure:target figcaption {
   height: auto;
   overflow: visible;
@@ -186,7 +185,7 @@ svg {
 }
 
 path:not([fill="none"]) {
-  fill: var(--color-foreground);
+  fill: var(--color-hyperlinks);
   transition: fill 0.15s ease-out;
 }
 
