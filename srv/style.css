@@ -234,7 +234,6 @@ a:hover path:not([fill="none"]) {
   }
 }
 
-
 @media (prefers-color-scheme: dark) {
   :root {
     --color-backdrop: #222a;
@@ -242,4 +241,32 @@ a:hover path:not([fill="none"]) {
     --color-foreground: #fff;
     --color-hyperlinks: #fff;
   }
+}
+
+@font-face {
+  font-family: 'Maven Pro';
+  font-style: normal;
+  font-weight: 400 500 600 700 800 900;
+  font-display: swap;
+  src: url(maven-pro/variations.woff2) format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'Maven Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url(maven-pro/variations.woff2) format('woff2-variations'),
+    url(maven-pro/400.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Maven Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    url(maven-pro/variations.woff2) format('woff2-variations'),
+    url(maven-pro/400.woff2) format('woff2');
 }
