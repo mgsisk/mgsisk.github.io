@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/mgsisk/mgsisk.github.io#readme",
   "devDependencies": {
-    "lighthouse": "^6.3.0"
+    "lighthouse": "^9.6.7"
   }
 }
