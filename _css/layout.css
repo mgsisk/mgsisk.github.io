@@ -1,0 +1,400 @@
+:focus-visible {
+  outline: var(--border-width) dashed;
+  outline-offset: calc(var(--border-width) * 2);
+  transition: outline var(--transition-duration)
+      var(--transition-timing-function),
+    outline-offset var(--transition-duration) var(--transition-timing-function);
+}
+
+svg {
+  height: var(--vr);
+  width: var(--vr);
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  margin: var(--border-width) 0;
+  mask: url("mask.webp");
+}
+
+a {
+  outline-offset: var(--vr);
+  outline-width: var(--vr);
+  text-decoration: none;
+}
+
+h2 {
+  color: transparent;
+  height: var(--section-gap);
+  margin: 0;
+}
+
+h3 {
+  font-size: var(--font-size-00);
+  line-height: var(--line-height-00);
+  margin: 0 0 calc(var(--vr) / 2);
+}
+
+figcaption {
+  mix-blend-mode: color-burn;
+}
+
+header {
+  animation: 60s linear infinite hue-rotate;
+  background: linear-gradient(
+    135deg,
+    var(--color-accent),
+    var(--color-analogue)
+  );
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 0 var(--edge-gap);
+  position: relative;
+  transform: translate3d(
+    0,
+    0,
+    0
+  ); /* NOTE Required for mix-blend-mode to work properly in Webkit. */
+
+  &::after,
+  &::before {
+    background: var(--color-background);
+    bottom: var(--border-width);
+    content: "";
+    display: block;
+    height: var(--border-width);
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+
+  &::after {
+    bottom: auto;
+    top: calc(var(--vr) * 2);
+  }
+
+  & :where(h1, p, path, a) {
+    mix-blend-mode: color-burn;
+  }
+
+  & a {
+    color: currentcolor;
+    font-weight: bolder;
+    padding: calc(var(--vr) / 2);
+    position: relative;
+    transition: outline var(--transition-duration)
+        var(--transition-timing-function),
+      outline-offset var(--transition-duration)
+        var(--transition-timing-function),
+      transform var(--transition-duration) var(--transition-timing-function);
+
+    &:--enter {
+      color: currentcolor;
+      outline: var(--border-width) dashed currentcolor;
+      outline-offset: calc(var(--border-width) * -3);
+    }
+
+    &:active {
+      transform: scale(0.95);
+      transition: none;
+    }
+
+    &[href="/"] {
+      height: calc(var(--vr) * 2);
+      margin: 0 0 0 calc(var(--vr) * -0.5);
+      position: absolute;
+      top: 0;
+      width: calc(var(--vr) * 2);
+    }
+  }
+
+  & p {
+    margin: 0 0 var(--section-gap);
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 calc(var(--vr) * -0.5) var(--section-gap);
+  order: -1;
+}
+
+main {
+  padding: 0 var(--edge-gap) var(--section-gap);
+
+  & div {
+    display: grid;
+    gap: var(--vr);
+    grid-template: auto / repeat(
+        auto-fill,
+        minmax(min(100%, calc(var(--max-width) / 2.5)), 1fr)
+      );
+    margin: 0
+      min(var(--vr) * -1, var(--vr) / -2 + -50vw - var(--max-width) / -2)
+      var(--vr);
+    padding: 0 var(--vr);
+
+    & figure {
+      margin: 0;
+    }
+  }
+}
+
+footer {
+  animation: 60s linear infinite hue-rotate;
+  background: linear-gradient(
+    270deg,
+    var(--color-accent),
+    var(--color-analogue)
+  );
+  margin: auto 0 0;
+  text-align: center;
+  transform: translate3d(
+    0,
+    0,
+    0
+  ); /* NOTE Required for mix-blend-mode to work properly in Webkit. */
+
+  &::after {
+    background: var(--color-background);
+    content: "";
+    display: block;
+    height: var(--border-width);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: var(--border-width);
+  }
+
+  & a {
+    color: currentcolor;
+    display: block;
+    font-weight: bolder;
+    padding: calc(var(--vr) / 2);
+    mix-blend-mode: color-burn;
+    transition: outline var(--transition-duration)
+        var(--transition-timing-function),
+      outline-offset var(--transition-duration)
+        var(--transition-timing-function),
+      transform var(--transition-duration) var(--transition-timing-function);
+
+    &:--enter {
+      color: currentcolor;
+      outline: var(--border-width) dashed var(--color-foreground);
+      outline-offset: calc(var(--border-width) * -3);
+    }
+
+    &:active {
+      transform: scale(0.95);
+      transition: none;
+    }
+  }
+}
+
+figure {
+  animation: 60s linear infinite hue-rotate;
+  outline: var(--border-width) solid var(--color-accent);
+  outline-offset: calc(var(--border-width) * -1);
+  padding: calc(var(--vr) / 2);
+  position: relative;
+  transition: background-color var(--transition-duration)
+      var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function),
+    transform var(--transition-duration) var(--transition-timing-function);
+  width: 100%;
+
+  &:--enter {
+    background: var(--color-accent);
+    box-shadow: var(--border-width) var(--border-width) 0
+        var(--color-background),
+      calc(var(--border-width) * 2) calc(var(--border-width) * 2) 0
+        var(--color-accent);
+    transform: scale(1.05) skew(-0.5deg, -1deg)
+      translate(calc(var(--border-width) * -1), calc(var(--border-width) * -1));
+  }
+
+  &:nth-child(odd) {
+    outline-color: var(--color-analogue);
+
+    &:--enter {
+      background: var(--color-analogue);
+      box-shadow: calc(var(--border-width) * -1) var(--border-width) 0
+          var(--color-background),
+        calc(var(--border-width) * -2) calc(var(--border-width) * 2) 0
+          var(--color-analogue);
+      transform: scale(1.05) skew(0.5deg, 1deg)
+        translate(var(--border-width), calc(var(--border-width) * -1));
+    }
+  }
+
+  &:active,
+  &:nth-child(odd):active {
+    box-shadow: none;
+    transform: scale(0.95);
+    transition: none;
+  }
+
+  & img {
+    animation: 60s linear infinite reverse hue-rotate;
+    margin: 0 0 calc(var(--vr) / 2);
+    object-fit: cover;
+    width: 100%;
+  }
+
+  & h3 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & svg {
+    order: 1;
+  }
+
+  & p {
+    margin: 0 0 calc(var(--vr) / 2);
+  }
+
+  & a {
+    bottom: 0;
+    color: transparent;
+    font-weight: bolder;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+
+    &:--enter,
+    &:active {
+      color: transparent;
+      outline-color: var(--color-foreground);
+    }
+  }
+}
+
+main > figure {
+  outline-color: transparent;
+
+  &::after,
+  &::before {
+    border: var(--border-width) solid var(--color-accent);
+    bottom: 0;
+    content: "";
+    left: 0;
+    mask: linear-gradient(135deg, #000, #0000);
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: background-color var(--transition-duration)
+      var(--transition-timing-function);
+    z-index: -1;
+  }
+
+  &::after {
+    border-color: var(--color-analogue);
+    mask: linear-gradient(135deg, #0000, #000);
+  }
+
+  &:--enter {
+    background: transparent;
+    box-shadow: none;
+    outline-color: var(--color-background);
+    outline-offset: calc(var(--border-width) * -2);
+    transform: scale(1.05);
+
+    &::after {
+      background: var(--color-analogue);
+    }
+
+    &::before {
+      background: var(--color-accent);
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+ul {
+  display: grid;
+  gap: var(--vr);
+  grid-template: auto / repeat(
+      auto-fill,
+      minmax(min(100%, calc(var(--max-width) / 2.5)), 1fr)
+    );
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &:only-child {
+    margin: var(--section-gap) 0;
+  }
+}
+
+li {
+  animation: 60s linear infinite hue-rotate;
+  outline: var(--border-width) solid var(--color-accent);
+  outline-offset: calc(var(--border-width) * -1);
+  position: relative;
+  transition: background-color var(--transition-duration)
+      var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function),
+    transform var(--transition-duration) var(--transition-timing-function);
+  width: 100%;
+
+  &:--enter {
+    background: var(--color-accent);
+    box-shadow: var(--border-width) var(--border-width) 0
+        var(--color-background),
+      calc(var(--border-width) * 2) calc(var(--border-width) * 2) 0
+        var(--color-accent);
+    transform: scale(1.05) skew(-0.5deg, -1deg)
+      translate(calc(var(--border-width) * -1), calc(var(--border-width) * -1));
+  }
+
+  &:nth-child(odd) {
+    outline: var(--border-width) solid var(--color-analogue);
+
+    &:--enter {
+      background: var(--color-analogue);
+      box-shadow: calc(var(--border-width) * -1) var(--border-width) 0
+          var(--color-background),
+        calc(var(--border-width) * -2) calc(var(--border-width) * 2) 0
+          var(--color-analogue);
+      transform: scale(1.05) skew(0.5deg, 1deg)
+        translate(var(--border-width), calc(var(--border-width) * -1));
+    }
+  }
+
+  &:active,
+  &:nth-child(odd):active {
+    box-shadow: none;
+    transition: none;
+    transform: scale(0.95);
+  }
+
+  & a {
+    align-items: center;
+    color: var(--color-foreground);
+    display: flex;
+    font-weight: bolder;
+    justify-content: space-between;
+    mix-blend-mode: color-burn;
+    padding: calc(var(--vr) / 2);
+    position: relative;
+
+    &:--enter,
+    &:active {
+      color: var(--color-foreground);
+    }
+  }
+
+  & svg {
+    order: 1;
+  }
+}
