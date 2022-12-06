@@ -1,0 +1,101 @@
+:root {
+  /* ----- Colors ----------------------------------------------------------- */
+  --color-background: white;
+  --color-foreground: #333;
+  --color-accent: hsl(270deg 100% 92%);
+  --color-analogue: hsl(210deg 100% 92%);
+  --color-disabled: grey;
+  --color-invalid: firebrick;
+
+  /* ----- Typography ------------------------------------------------------- */
+  --font-size: 0.8em + 1vw; /* 0.7em + 1.5vw for faster growth || 0.9em + 0.5vw for slower growht */
+  --font-stack-head: var(--font-stack);
+  --font-stack-mono: monospace, monospace;
+  --font-stack: georama, system-ui;
+  --line-height: 1.5;
+  --scale: 1.2;
+  --tab-size: 2;
+
+  /* ----- Iconography ------------------------------------------------------ */
+  --icon-check: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="white"><path d="M20 45l20 25 40-45" stroke-width="16"/></svg>');
+  --icon-dash: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="white"><path d="M10 50l80 0" stroke-width="16"/></svg>');
+  --icon-expand: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="black"><path d="M30 40l20-20 20 20" stroke-width="8"/><path d="M30 60l20 20 20-20" stroke-width="8"/></svg>');
+  --icon-expand-enter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="royalblue"><path d="M30 40l20-20 20 20" stroke-width="8"/><path d="M30 60l20 20 20-20" stroke-width="8"/></svg>');
+
+  /* ----- Other ------------------------------------------------------------ */
+  --border-width: calc(var(--vr) / 12);
+  --max-width: 60ch;
+  --edge-gap: max(var(--vr), var(--vr) / 2 + 50vw - var(--max-width) / 2);
+  --section-gap: calc(var(--vr) / 3 + 5vw);
+  --transition-delay: 0;
+  --transition-duration: 0.2s;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ===== Derived ========================================================== */
+  --font-size-s1: calc(1rem * var(--scale-s1));
+  --font-size-00: 1rem;
+  --font-size-01: calc(1rem * var(--scale));
+  --font-size-02: calc(1rem * var(--scale-02));
+  --font-size-03: calc(1rem * var(--scale-03));
+  --font-size-04: calc(1rem * var(--scale-04));
+  --font-size-05: calc(1rem * var(--scale-05));
+  --line-height-s1: calc(var(--line-height) / var(--scale-s1));
+  --line-height-00: var(--line-height);
+  --line-height-01: calc(var(--line-height) / var(--scale) * 1);
+  --line-height-02: calc(var(--line-height) / var(--scale-02) * 2);
+  --line-height-03: calc(var(--line-height) / var(--scale-03) * 2);
+  --line-height-04: calc(var(--line-height) / var(--scale-04) * 2);
+  --line-height-05: calc(var(--line-height) / var(--scale-05) * 2);
+  --scale-s1: calc(1 / var(--scale));
+  --scale-02: calc(var(--scale) * var(--scale));
+  --scale-03: calc(var(--scale) * var(--scale-02));
+  --scale-04: calc(var(--scale) * var(--scale-03));
+  --scale-05: calc(var(--scale) * var(--scale-04));
+  --vr: calc(1rem * var(--line-height));
+}
+
+@custom-selector :--button
+  ::file-selector-button,
+  button,
+  [role="button"],
+  input:where([type="button"]),
+  input:where([type="reset"]),
+  input:where([type="submit"]);
+@custom-selector :--enter :focus, :hover;
+@custom-selector :--header h1, h2, h3, h4, h5, h6;
+
+@custom-media --dark (prefers-color-scheme: dark);
+@custom-media --forced-colors (forced-colors: active);
+@custom-media --landscape (orientation: landscape);
+@custom-media --less-contrast (prefers-contrast: less);
+@custom-media --less-motion (prefers-reduced-motion);
+@custom-media --light (prefers-color-scheme: light);
+@custom-media --more-contrast (prefers-contrast: more);
+@custom-media --no-hover (hover: none);
+@custom-media --portrait (orientation: portrait);
+@custom-media --micro (width >= 20em);
+@custom-media --tiny (width >= 40em);
+@custom-media --small (width >= 60em);
+@custom-media --medium (width >= 80em);
+@custom-media --large (width >= 100em);
+@custom-media --huge (width >= 120em);
+@custom-media --mega (width >= 240em);
+
+/* ----- Animations --------------------------------------------------------- */
+
+@keyframes hue-rotate {
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}
+
+/* ----- Fonts -------------------------------------------------------------- */
+
+@font-face {
+  font-display: swap;
+  font-family: Georama;
+  font-stretch: 62.5% 150%;
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("georama/variations.woff2") format("woff2-variations");
+}

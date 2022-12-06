@@ -1,4 +1,2 @@
-.bundle
-.DS_Store
-/_site/
-/node_modules/
+.vagrant/
+node_modules/

@@ -1,0 +1,31 @@
+- name: USA Tae Kwon Do
+  url: https://usatkdmi.com
+  desc: Custom business site built for a local taekwondo dojang.
+
+- name: Providence
+  url: https://github.com/mgsisk/providence
+  desc: Opinionated Vagrant shell provisioner for web development.
+
+- name: Kalamazoo Hot Dog Walk
+  url: https://hotdogwalk.com
+  desc: Custom registration site built for an annual charity event.
+
+- name: WMU BRCC
+  url: https://wmubrcc.com
+  desc: Website redesign using a custom WordPress theme.
+
+- name: King of the Unknown
+  url: https://kingoftheunknown.com
+  desc: Website redesign using a custom WordPress theme.
+
+- name: Hazard
+  url: /hazard
+  desc: Self-contained quiz creation in your browser using local storage.
+
+- name: Inkblot
+  url: https://github.com/mgsisk/inkblot
+  desc: An elegant, fully responsive, highly customizable WordPress theme.
+
+- name: Webcomic
+  url: https://github.com/mgsisk/webcomic
+  desc: Turn your WordPress-powered site into a comic publishing platform.

@@ -1,24 +1,41 @@
 {
   "name": "mgsisk.github.io",
   "version": "1.0.0",
-  "description": "This is the source repo for <https://mgsisk.com>.",
-  "main": "index.js",
+  "description": "Source repo for <https://mgsisk.com>.",
+  "main": "index.md",
   "scripts": {
-    "make": "vagrant ssh -c 'sudo jekyll build -d /srv/web -s /vagrant -w --force_polling'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build.css": "postcss _css/style.css -o srv/style.css",
+    "format": "prettier -uw **/*",
+    "lint.css": "stylelint --fix _css/**/*.css",
+    "lint.json": "YAMLLINT_SCHEMA=JSON_SCHEMA yamllint '**/*.json' '**/.*.json'",
+    "lint.md": "remark .",
+    "lint.yml": "yamllint '**/*.yml' '**/.*.yml'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch.css": "chokidar '_css/**/*.css' -c 'npm run build.css'"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mgsisk/mgsisk.github.io.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Michael Sisk <me@mgsisk.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mgsisk/mgsisk.github.io/issues"
   },
   "homepage": "https://github.com/mgsisk/mgsisk.github.io#readme",
   "devDependencies": {
-    "lighthouse": "^6.3.0"
+    "@shopify/prettier-plugin-liquid": "^1.0.0-rc.2",
+    "chokidar-cli": "^3.0.0",
+    "cssnano": "^5.1.14",
+    "cssnano-preset-advanced": "^5.3.9",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.0.0",
+    "postcss-preset-env": "^7.8.3",
+    "prettier": "^2.8.0",
+    "stylelint": "^14.15.0",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-standard": "^29.0.0",
+    "yaml-lint": "^1.7.0"
   }
 }

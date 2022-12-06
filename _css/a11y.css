@@ -1,0 +1,163 @@
+@media (--dark) {
+  :root {
+    --color-background: #222;
+    --color-foreground: #bbb;
+    --color-accent: hsl(270deg 58% 29%);
+    --color-analogue: hsl(210deg 58% 29%);
+  }
+
+  header :where(h1, p, path, a),
+  ul a,
+  figcaption,
+  footer a {
+    mix-blend-mode: color-dodge;
+  }
+}
+
+@media (--forced-colors) {
+  header :where(h1, p, path, a),
+  ul a,
+  figcaption,
+  footer a {
+    mix-blend-mode: normal;
+  }
+
+  header,
+  footer,
+  figure,
+  figure img,
+  li {
+    animation: none;
+  }
+
+  h2 {
+    height: auto;
+    margin: 0 0 var(--vr);
+  }
+
+  figure {
+    padding-top: calc(var(--vr) * 2);
+  }
+}
+
+@media (--more-contrast) {
+  :root {
+    --color-background: white;
+    --color-foreground: black;
+  }
+
+  body {
+    mask: none;
+  }
+}
+
+@media (--more-contrast) and (--dark) {
+  :root {
+    --color-background: black;
+    --color-foreground: white;
+  }
+}
+
+@media (--less-contrast) {
+  body {
+    opacity: 0.62;
+  }
+}
+
+@media (--less-motion) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  header,
+  footer,
+  figure,
+  figure img,
+  li {
+    animation: none;
+  }
+
+  :focus-visible,
+  header a,
+  footer a,
+  figure,
+  main > figure::after,
+  main > figure::before,
+  li {
+    transition: none;
+  }
+}
+
+@media print {
+  :root {
+    --color-foreground: black;
+    --color-background: white;
+    --font-size: 10pt;
+  }
+
+  body {
+    display: block;
+  }
+
+  header a[href="/"] {
+    right: 0;
+    left: auto;
+  }
+
+  figure svg,
+  nav,
+  main > figure::after,
+  main > figure::before,
+  ul svg {
+    display: none;
+  }
+
+  ul,
+  li a,
+  li:nth-child(odd) a {
+    display: block;
+    padding: 0;
+  }
+
+  body,
+  header,
+  main,
+  main div {
+    margin: 0;
+    mask: none;
+    padding: 0;
+  }
+
+  figure,
+  figure:nth-child(odd),
+  li,
+  li:nth-child(odd),
+  main div,
+  header p {
+    outline: none;
+    margin: 0 0 var(--vr);
+    padding: 0;
+  }
+
+  figure a {
+    color: inherit;
+    position: static;
+  }
+
+  header :where(h1, p, path, a),
+  ul a,
+  figcaption,
+  footer a {
+    mix-blend-mode: normal;
+  }
+
+  h2 {
+    color: inherit;
+    height: auto;
+    margin: 0 0 var(--vr);
+  }
+
+  a:not([href="/"])::after {
+    content: " – " attr(href);
+  }
+}

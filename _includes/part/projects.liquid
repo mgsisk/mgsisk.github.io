@@ -1,0 +1,29 @@
+{%- if site.data.projects.size > 0 -%}
+  <div>
+    {%- for project in site.data.projects -%}
+      <figure>
+        <img
+          src="{{ project.name | slugify | append: '.webp' | prepend: '/srv/' | relative_url }}"
+          width="320"
+          height="200"
+          alt=""
+          loading="lazy"
+        >
+        <figcaption>
+          <h3>
+            {%- if project.url contains 'github' -%}
+              {%- include icon/github.svg -%}
+            {%- elsif project.url contains 'dribbble' -%}
+              {%- include icon/dribbble.svg -%}
+            {%- else -%}
+              {%- include icon/public.svg -%}
+            {%- endif -%}
+            {{ project.name }}
+          </h3>
+          {{ project.desc | markdownify }}
+          <a href="{{ project.url }}">View {{ project.name }}</a>
+        </figcaption>
+      </figure>
+    {%- endfor -%}
+  </div>
+{%- endif -%}
