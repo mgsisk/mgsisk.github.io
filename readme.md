@@ -15,7 +15,7 @@ complex problems over twenty years of experience. My approach combines a love of
 technical detail with a keen design sense to craft impactful user experiences.
 Here's some of my work.
 
-{% include part/projects.html %}
+{% include part/projects.liquid %}
 
 ## Contact
 
@@ -24,8 +24,8 @@ independent creators to Fortune 500 companies—I’ve been fortunate to help
 individuals and organizations of all sizes bring their creative ideas to life.
 And I’d love to help with your project.
 
-{% include part/action.html %}
+{% include part/action.liquid %}
 
 Want to connect elsewhere? You can find me all over the interweb.
 
-{% include part/contact.html %}
+{% include part/contact.liquid %}
