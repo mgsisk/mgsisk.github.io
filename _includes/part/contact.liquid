@@ -1,0 +1,12 @@
+{%- if site.data.contact.size > 0 -%}
+  <ul>
+    {%- for contact in site.data.contact -%}
+      <li>
+        <a href="{{ contact.url }}">
+          {%- include icon/{{ contact.name | split: ' ' | last | downcase }}.svg -%}
+          {{ contact.name }}
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
