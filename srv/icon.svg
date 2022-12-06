@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+<style>
+    @media (prefers-color-scheme: dark) {
+      :root {
+        filter: invert(1);
+      }
+    }
+  </style>
+  <title>Michael Sisk</title>
+  <path d="M9.891,16l6.109,-6.994l-1.891,-2.17l-8,6.109l0,3.055l3.782,0Z"/>
+  <path d="M12.218,16l3.782,0l-0,-3.055l-3.782,3.055Z"/>
+  <path d="M12.218,0l-4.218,4.829l-4.218,-4.829l-3.782,0l0,16l3.782,0l-0,-10.058l4.218,3.222l8,-6.109l-0,-3.055l-3.782,0Z"/>
+</svg>
