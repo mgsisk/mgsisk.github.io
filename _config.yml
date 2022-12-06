@@ -1,17 +1,19 @@
+strict_front_matter: true
+timezone: America/Detroit
+
+repository: mgsisk/mgsisk.github.io
+
+theme: null
 title: Michael Sisk
-description: >
-  Award-winning designer and developer with a passion for the web, new media,
-  and bringing creative ideas to life.
 url: https://mgsisk.com
-include:
-  - _pages
+baseurl: /
+
 exclude:
+  - CODEOWNERS
   - Gemfile
   - Gemfile.lock
-  - license.md
+  - LICENSE.md
   - node_modules
   - package-lock.json
   - package.json
-  - readme.md
-  - vagrant.sh
   - Vagrantfile
