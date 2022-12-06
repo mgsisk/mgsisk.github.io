@@ -1,0 +1,12 @@
+---
+---
+{{ site.github.owner.name }} created this site in {{ site.github.owner.location }} using handcrafted HTML and CSS.
+It's hosted on GitHub, registered with Cloudflare, managed with Jekyll, and was
+last updated on {{ site.time | date: '%A, %B %d, %Y' }}. View the original source at
+https://github.com/mgsisk/mgsisk.github.io
+{% if site.github.owner.hireable %}
+I'm taking on new clients. Send me the key details of your project – including
+scope, timeline, and budget – and I'll be in touch to discuss.
+
+{{ site.github.owner.email }}
+{%- endif -%}
