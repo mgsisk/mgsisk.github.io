@@ -8,7 +8,6 @@
     "format": "prettier -uw **/*",
     "lint.css": "stylelint --fix _css/**/*.css",
     "lint.json": "YAMLLINT_SCHEMA=JSON_SCHEMA yamllint '**/*.json' '**/.*.json'",
-    "lint.md": "remark .",
     "lint.yml": "yamllint '**/*.yml' '**/.*.yml'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch.css": "chokidar '_css/**/*.css' -c 'npm run build.css'"
