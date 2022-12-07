@@ -6,7 +6,7 @@ last updated on {{ site.time | date: '%A, %B %d, %Y' }}. View the original sourc
 https://github.com/mgsisk/mgsisk.github.io
 {% if site.github.owner.hireable %}
 I'm taking on new clients. Send me the key details of your project – including
-scope, timeline, and budget – and I'll be in touch to discuss.
+scope, timeline, and budget – and I'll be in touch.
 
 {{ site.github.owner.email }}
 {%- endif -%}
